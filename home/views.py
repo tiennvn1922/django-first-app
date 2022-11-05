@@ -5,7 +5,7 @@ from django.http import HttpResponse
 
 
 def index(request):
-    response = HttpResponse()
-    response.writelines('<h1>writelines homepage</h1>')
-    response.write('<h2>write homepage</h2>')
-    return response
+    return render(request, 'pages/home.html')
+
+def contact(request):
+    return render(request, 'pages/contact.html')
